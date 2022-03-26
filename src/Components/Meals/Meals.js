@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import Meal from '../Meal/Meal';
+import './Meals.css';
 
 const Meals = () => {
     const [meals, setMeals] = useState([]);
@@ -10,10 +12,13 @@ const Meals = () => {
     return (
         <div className='meals-container'>
             <div className="meals">
-                    <h1>Total Meals {meals.length}</h1>
+                {
+                    meals.map(meal => <Meal key = {meal.id} meal={meal}></Meal>)   
+                }
             </div>
             <div className="favourite-meals">
-
+                <p>Choose meals</p>
+               
             </div>
         </div>
     );
