@@ -61,12 +61,6 @@
         "img": "https://www.themealdb.com/images/media/meals/ysxwuq1487323065.jpg",
         "price": 300
 
-    },
-    {
-        "id": 5285,
-        "name": "Fettucine alfredo",
-        "img": "https://www.themealdb.com/images/media/meals/uquqtu1511178042.jpg",
-        "price": 200
-
     }
+
 ]
