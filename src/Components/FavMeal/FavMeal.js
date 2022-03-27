@@ -1,13 +1,11 @@
 import React from 'react';
 
-const FavMeal = ({meals}) => {
-    console.log(meals);
+const FavMeal = ({meal}) => {
     return (
         <div>
          {
-              meals.map(meal => <p>{meal.name}</p>)
+             <p>{meal.name}</p>
          }
-
         </div>
     );
 };

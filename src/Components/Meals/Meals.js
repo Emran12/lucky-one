@@ -17,7 +17,16 @@ const Meals = () => {
        setAddedMeal(newMeal);
      }
 
+     const selectOne = ()=>{
+        const newMeal =  addedMeal[Math.floor(Math.random()*addedMeal.length)];
+        setAddedMeal([newMeal]);
+     
+     }
 
+     const selectAgain = ()=>{
+         const newMeal = [];
+         setAddedMeal(newMeal);
+     }
     return (
         <div className='meals-container'>
             <div className="meals">
@@ -26,9 +35,11 @@ const Meals = () => {
                 }
             </div>
             <div className="favourite-meals">
-                <FavMeal meals = {addedMeal}></FavMeal>
-                <button>Choose 1 For One</button> <br></br>
-                <button>Choose Again</button>
+                {
+                    addedMeal.map(meal => <FavMeal key= {meal.id} meal ={meal}></FavMeal>)
+                }
+                <button onClick={selectOne}>Select One</button> <br></br>
+                <button onClick={selectAgain}>Select Again</button>
             </div>
         </div>
     );
