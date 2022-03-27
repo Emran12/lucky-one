@@ -1,0 +1,19 @@
+.selected-meals img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.btn {
+    background-color: aquamarine;
+    width: 120px;
+    height: 40px;
+    border-radius: 40px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    padding: 5px;
+}
+
+.btn:hover {
+    background-color: orange;
+}

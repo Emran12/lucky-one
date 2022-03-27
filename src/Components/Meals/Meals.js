@@ -13,8 +13,11 @@ const Meals = () => {
      } , [])
 
      const handleChooseMeal = (meal) => {
-       const newMeal = [...addedMeal, meal];
-       setAddedMeal(newMeal);
+     
+       if (addedMeal.length < 4){
+        const newMeal = [...addedMeal, meal]; 
+        setAddedMeal(newMeal);
+       }
      }
 
      const selectOne = ()=>{
@@ -35,11 +38,12 @@ const Meals = () => {
                 }
             </div>
             <div className="favourite-meals">
+                <h1>Selected Meals</h1>
                 {
                     addedMeal.map(meal => <FavMeal key= {meal.id} meal ={meal}></FavMeal>)
                 }
-                <button onClick={selectOne}>Select One</button> <br></br>
-                <button onClick={selectAgain}>Select Again</button>
+                <button className='btn' onClick={selectOne}>Select One</button> <br></br>
+                <button className='btn' onClick={selectAgain}>Select Again</button>
             </div>
         </div>
     );

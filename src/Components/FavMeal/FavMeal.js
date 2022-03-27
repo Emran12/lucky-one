@@ -1,11 +1,14 @@
 import React from 'react';
+import './FavMeal.css';
 
 const FavMeal = ({meal}) => {
     return (
         <div>
          {
-             <p>{meal.name}</p>
-         }
+             <div className='selected-meals'>
+                 <p><img src={meal.img} alt="" />{meal.name} </p>
+             </div>
+         } 
         </div>
     );
 };
