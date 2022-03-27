@@ -35,3 +35,7 @@
 .btn-meal:hover {
     background-color: darkorange;
 }
+
+.cart-logo {
+    margin-left: 10px;
+}
